@@ -1,0 +1,42 @@
+{
+  "name": "@elkdex/rewards",
+  "version": "1.0.0",
+  "description": "🏛 Rewards contracts for the Elk Finance protocol",
+  "author": "Team Elk <hello@elk.finance>",
+  "license": "MIT",
+  "scripts": {
+    "precompile": "rimraf ./build/",
+    "compile": "npx hardhat compile",
+    "pretest": "yarn compile",
+    "test": "npx hardhat test",
+    "lint": "solium -d contracts",
+    "prepublishOnly": "yarn test"
+  },
+  "devDependencies": {
+    "@gnosis.pm/mock-contract": "^4.0.0",
+    "@nomiclabs/hardhat-ethers": "^2.0.1",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@openzeppelin/contracts": "^3.3.0",
+    "@openzeppelin/test-environment": "^0.1.8",
+    "@types/chai": "^4.2.12",
+    "@types/mocha": "^8.0.3",
+    "chai": "^4.2.0",
+    "ethereum-waffle": "^3.2.1",
+    "ethereumjs-util": "^7.0.4",
+    "ethers": "^5.0.24",
+    "hardhat": "^2.6.2",
+    "hardhat-spdx-license-identifier": "^2.0.3",
+    "mocha": "^8.1.3",
+    "prettier": "^2.1.1",
+    "rimraf": "^3.0.2",
+    "solc": "0.5.16",
+    "solidity-coverage": "^0.7.14",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2",
+    "web3": "^1.3.0"
+  },
+  "dependencies": {
+    "@tenderly/hardhat-tenderly": "^1.0.6",
+    "truffle-flattener": "^1.5.0"
+  }
+}
