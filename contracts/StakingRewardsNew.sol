@@ -410,16 +410,6 @@ contract StakingRewards is ReentrancyGuard, Ownable, Pausable {
         emit RewardsEmissionStarted(reward, boosterReward, duration);
     }
 
-    /* ========== DEPRECATED ========== */
-    
-    function coverageOf(address account) external view returns (uint256) {
-        return coverages[account];
-    }
-    
-    function updateLastTime(uint timestamp) external onlyOwner {
-	    lastUpdateTime = timestamp;
-    }
-
     /* ========== MODIFIERS ========== */
 
     modifier updateReward(address account) {
